@@ -1,6 +1,13 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-
+  let license = "";
+  if (data.license === "MIT") {
+    license = "![APM](https://img.shields.io/apm/l/readme)";
+  } else if (data.license === "GNU") {
+    license = "";
+  } else {
+    license = "";
+  }
   return `${license}
   # ${data.title}
 
