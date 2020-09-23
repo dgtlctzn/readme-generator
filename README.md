@@ -1,4 +1,7 @@
 # readme-generator
+![APM](https://img.shields.io/apm/l/readme)
+![AUR license](https://img.shields.io/aur/license/readme)
+
 [description](#description)
 
 

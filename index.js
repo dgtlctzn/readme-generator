@@ -36,8 +36,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "What text would you like to include in the 'Contributors' section?",
-    name: "contributors",
+    message: "What text would you like to include in the 'Contributing' section?",
+    name: "contributing",
   },
   {
     type: "input",
