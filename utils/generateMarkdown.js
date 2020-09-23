@@ -26,13 +26,13 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage
   ${data.usageText}
-  [${usageName}](${usageLink})
+  [${data.usageName}](${data.usageLink})
   ## Contributing
   ${data.contributing}
   ## Tests
   ${data.tests}
   ## Questions
-  Github profile: [${data.username}](${githubLink})
+  Github profile: [${data.username}](github.com)
   If you have any questions about the project please contact ${data.email}
   ## License
   This project is covered under the ${data.license} license

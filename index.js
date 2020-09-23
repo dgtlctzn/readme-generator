@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 // const promptAsync = util.promisify(inquirer.prompt);
 
@@ -11,7 +12,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "What text would you like to include under the 'Description' section of your Readme?",
+    message:
+      "What text would you like to include under the 'Description' section of your Readme?",
     name: "description",
   },
   {
@@ -21,22 +23,26 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please include any text you would like in the 'Usage' section of the Readme",
+    message:
+      "Please include any text you would like in the 'Usage' section of the Readme",
     name: "usageText",
   },
   {
     type: "input",
-    message: "Please enter any URLs that you would like to include in the 'Usage' section of the Readme (enter as comma seperated values for multiple entries)",
+    message:
+      "Please enter any URLs that you would like to include in the 'Usage' section of the Readme (enter as comma seperated values for multiple entries)",
     name: "usageLink",
   },
   {
     type: "input",
-    message: "What are the names of these URLs (enter as comma seperated values for multiple entries)?",
+    message:
+      "What are the names of these URLs (enter as comma seperated values for multiple entries)?",
     name: "usageName",
   },
   {
     type: "input",
-    message: "What text would you like to include in the 'Contributing' section?",
+    message:
+      "What text would you like to include in the 'Contributing' section?",
     name: "contributing",
   },
   {
@@ -45,10 +51,11 @@ const questions = [
     name: "tests",
   },
   {
-      type: "list",
-      message: "Which of the following licenses would you like to use for your project?",
-        choices: ["MIT", "GNU", "Apache"],
-        name: "license",
+    type: "list",
+    message:
+      "Which of the following licenses would you like to use for your project?",
+    choices: ["MIT", "GNU", "Apache"],
+    name: "license",
   },
   {
     type: "input",
@@ -69,9 +76,9 @@ function writeToFile(fileName, data) {}
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    console.log(answers);
-  } catch {
-      if (err) throw err;
+    console.log(generateMarkdown(answers));
+  } catch (err) {
+    throw err;
   }
 }
 
