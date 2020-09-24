@@ -91,9 +91,9 @@ const questions = [
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    asyncWrite(answers.file, generateMarkdown(answers));
+    await asyncWrite(answers.file, generateMarkdown(answers));
   } catch (err) {
-    if (err) throw err;
+    console.log(err);
   }
 }
 
