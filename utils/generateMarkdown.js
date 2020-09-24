@@ -23,7 +23,7 @@ function generateMarkdown(data) {
   * [License](#license)
 
   ## Description
-  \`\`\`${data.description}\`\`\`
+  ${data.description}
   ## Installation
   ${data.installation}
   ## Usage
