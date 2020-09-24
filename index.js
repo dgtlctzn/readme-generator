@@ -43,13 +43,13 @@ const questions = [
   {
     type: "input",
     message:
-      "Please enter any URLs that you would like to include in the 'Usage' section of the Readme (enter as comma seperated values for multiple entries):",
+      "Please enter the URL you would like to include in the 'Usage' section of the Readme:",
     name: "usageLink",
   },
   {
     type: "input",
     message:
-      "What are the names of these URLs (enter as comma seperated values for multiple entries)?:",
+      "What is the name of this URL?:",
     name: "usageName",
   },
   {
