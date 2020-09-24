@@ -28,6 +28,7 @@ function generateMarkdown(data) {
   ${data.installation}
   ## Usage
   ${data.usageText}
+  
   [${data.usageName}](${data.usageLink})
   ## Contributing
   ${data.contributing}
