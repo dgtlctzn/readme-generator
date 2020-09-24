@@ -92,7 +92,7 @@ function writeToFile(fileName, data) {
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    writeToFile("NEW-README.md", generateMarkdown(answers));
+    fs.writeFile(process.argv[2], generateMarkdown(answers));
   } catch (err) {
     throw err;
   }
