@@ -87,6 +87,7 @@ async function init() {
   try {
     const answers = await inquirer.prompt(questions);
     await asyncWrite("README.md", generateMarkdown(answers));
+    console.log("README file successfully generated!")
   } catch (err) {
     console.log(err);
   }
