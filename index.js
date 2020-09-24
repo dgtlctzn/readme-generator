@@ -1,6 +1,9 @@
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const fs = require("fs");
+const util = require("util");
+
+const asyncWrite = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -83,9 +86,9 @@ const questions = [
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    fs.writeFile(process.argv[2], generateMarkdown(answers), error => {if (error) throw error});
+    asyncWrite(process.argv[2], generateMarkdown(answers));
   } catch (err) {
-    throw err;
+    if (err) throw err;
   }
 }
 
