@@ -13,7 +13,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Is there an image url (or file relative to the current folder) you would like to include below the title?",
+    message:
+      "Is there an image url (or file relative to the current folder) you would like to include below the title?",
     name: "imageLink",
   },
   {
@@ -82,14 +83,16 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, error => {if (error) throw error})
+  fs.writeFile(fileName, data, (error) => {
+    if (error) throw error;
+  });
 }
 
 // function to initialize program
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    writeToFile("NEW-README.md",generateMarkdown(answers));
+    writeToFile("NEW-README.md", generateMarkdown(answers));
   } catch (err) {
     throw err;
   }

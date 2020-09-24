@@ -23,7 +23,7 @@ function generateMarkdown(data) {
   * [License](#license)
 
   ## Description
-  ${data.description}
+  \`\`\`${data.description}\`\`\`
   ## Installation
   ${data.installation}
   ## Usage
@@ -34,7 +34,8 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   ## Questions
-  Github profile: [${data.username}](github.com)
+  Github profile: [${data.username}](github.com/${data.username})
+  
   If you have any questions about the project please contact ${data.email}
   ## License
   This project is covered under the ${data.license} license
