@@ -2,11 +2,11 @@
 function generateMarkdown(data) {
   let license = "";
   if (data.license === "MIT") {
-    license = "![APM](https://img.shields.io/apm/l/readme)";
+    license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   } else if (data.license === "GNU") {
-    license = "";
+    license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
   } else {
-    license = "";
+    license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
   }
   return `${license}
   # ${data.title}
