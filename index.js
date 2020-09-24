@@ -13,6 +13,16 @@ const questions = [
   },
   {
     type: "input",
+    message: "Is there an image url (or file relative to the current folder) you would like to include below the title?",
+    name: "imageLink",
+  },
+  {
+    type: "input",
+    message: "What is the name of the image?",
+    name: "imageName",
+  },
+  {
+    type: "input",
     message:
       "What text would you like to include under the 'Description' section of your Readme?",
     name: "description",

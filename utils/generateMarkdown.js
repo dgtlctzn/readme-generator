@@ -11,6 +11,8 @@ function generateMarkdown(data) {
   return `${license}
   # ${data.title}
 
+  ![${data.imageName}](${data.imageLink})
+
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
