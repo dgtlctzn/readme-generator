@@ -19,7 +19,7 @@
   ## Usage
   The following link demonstrates a walkthrough of the readme generator:
   
-  [screencastify](www.link.com)
+  [screencastify](link.com)
   ## Contributing
   Special thanks to the Inquirer package for the command line interface and the GA Tech bootcamp for the necessary tools and information. 
   ## Tests
