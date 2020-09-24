@@ -9,6 +9,11 @@ const asyncWrite = util.promisify(fs.writeFile);
 const questions = [
   {
     type: "input",
+    message: "What file name would you like to write the Readme to?:",
+    name: "file",
+  },
+  {
+    type: "input",
     message: "What is the title of your project?:",
     name: "title",
   },
@@ -86,7 +91,7 @@ const questions = [
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    asyncWrite(process.argv[2], generateMarkdown(answers));
+    asyncWrite(answers.file, generateMarkdown(answers));
   } catch (err) {
     if (err) throw err;
   }
