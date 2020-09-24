@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   ## Tests
   ${data.tests}
   ## Questions
-  Github profile: [${data.username}](github.com/${data.username})
+  Github profile: [${data.username}](https://github.com/${data.username})
   
   If you have any questions about the project please contact ${data.email}
   ## License
