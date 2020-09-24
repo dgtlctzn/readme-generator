@@ -2,8 +2,6 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 const fs = require("fs");
 
-// const promptAsync = util.promisify(inquirer.prompt);
-
 // array of questions for user
 const questions = [
   {
@@ -81,18 +79,11 @@ const questions = [
   },
 ];
 
-// function to write README file
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, (error) => {
-    if (error) throw error;
-  });
-}
-
 // function to initialize program
 async function init() {
   try {
     const answers = await inquirer.prompt(questions);
-    fs.writeFile(process.argv[2], generateMarkdown(answers));
+    fs.writeFile(process.argv[2], generateMarkdown(answers), error => {if (error) throw error});
   } catch (err) {
     throw err;
   }
